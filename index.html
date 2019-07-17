@@ -8,13 +8,56 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
 
-    
+    <nav class="navbar navbar-dark bg-dark text-white">
+        <h1 class="mx-auto">Bijuu Collector</h1>
+    </nav>
+
+    <div class="container mt-5">
+
+      <div class="row">
+        <div class="col-md-4 my-auto text-white">
+            <h1 id="randNumber" class="text-center">10</h1>
+            <p id="win" class="text-left">Wins : </p>
+            <p id="lose" class="text-left">Losses : </p>
+        </div>
+        <div class="col-md-4 text-center fcolor">
+          <p>You have been given a random number on the left</p>
+          <p>Along with that are 4 characters which hold different values</p>
+          <p>Click on different characters to try and match the random number</p>
+          <p>If you go over the random number, YOU LOSE</p>
+        </div>
+        <div class="col-md-4 my-auto text-white text-center">
+            <h2 id="totalScore">Your score is : </h2>
+        </div>
+      </div>
+      <div class="row mt-5">
+          <div class="col-md-3">
+              <div class="card h-100 randPoints" style="width: 15rem;">
+                  <img src="./assets/images/onetail.png" class="card-img-top" alt="...">
+              </div>
+          </div>
+          <div class="col-md-3">
+              <div class="card h-100 randPoints" style="width: 15rem;">
+                  <img src="./assets/images/sixtails.png" class="card-img-top" alt="...">
+              </div>
+          </div>
+          <div class="col-md-3">
+              <div class="card h-100 randPoints" style="width: 15rem;">
+                  <img src="./assets/images/eighttails.png" class="card-img-top" alt="...">
+              </div>
+          </div>
+          <div class="col-md-3">
+              <div class="card h-100 randPoints" style="width: 15rem;">
+                  <img src="./assets/images/ninetails.png" class="card-img-top" alt="...">
+              </div>
+          </div>       
+      </div>
+    </div>
 
 <script 
   src="https://code.jquery.com/jquery-3.4.1.js"
