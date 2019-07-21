@@ -1,16 +1,16 @@
 // these variables hold the wins, losses, and total score
-let wins;
-let losses;
+let wins = 0;
+let losses = 0;
 let totalScore;
 
 // gets a random number between 19-120
-let randNum = Math.floor(Math.random() * 102) + 19;
+let randNum = Math.floor(Math.random() * 101) + 19;
 
 function imgPoints() {
 
     // gets a random number between 1-12
-    let imgRandNum = Math.floor(Math.random() * 12) + 1;
-    return imgRandNum;
+    let randImgNum = Math.floor(Math.random() * 12) + 1;
+    return randImgNum;
     
 };
 
@@ -18,45 +18,61 @@ function imgPoints() {
 function win() {
     
     wins++;
-    $("#win").append("Wins : " + wins);
+    $("#win").html("Wins : " + wins);
     
 };
 
 function lose() {
     
     losses++;
-    $("#lose").append("Losses : " + losses);
+    $("#lose").html("Losses : " + losses);
     
 };
 
 function score() {
 
-    totalScore++;
-    $("#totalScore").append("Total Score : " + totalScore);
+    totalScore = 0;
+    $("#totalScore").html("Total Score : " + totalScore);
 
 };
 
 function randScore() {
 
-    $("#randNumber").append(randNum);
+    $("#randNumber").html(randNum);
 
 }
 
-console.log(imgPoints());
-console.log(win());
-console.log(lose());
-console.log(score());
-console.log(randScore());
+function reset() {
 
-$(".imgPoints").attr("data-imgValue", imgPoints);
+    randNum = Math.floor(Math.random() * 101) + 19;
+    imgPoints();
+    score();
+    randScore();
+    // adds an attribute of data to the imagePoints class which holds a random #
+    $(".imgPoints").attr("data-imgValue", imgPoints);
+
+}
+
+reset();
+
 
 $(document).ready(function() {
 
-    $(".imgPoints").on("click", function(){
+    $(".imgPoints").on("click", function() {
     
         let imageValue = ($(this).attr("data-imgValue"));
         imageValue = parseInt(imageValue);
-        console.log(imageValue);
+        totalScore += imageValue;
+        $("#totalScore").html("Total Score : " + totalScore);
+
+
+        if (totalScore === randNum) {
+            win();
+            reset();
+        } else if (totalScore > randNum){
+            lose();
+            reset();
+        }
     
     });
 
