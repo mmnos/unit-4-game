@@ -6,15 +6,15 @@ let totalScore;
 // gets a random number between 19-120
 let randNum = Math.floor(Math.random() * 101) + 19;
 
+// generates and returns a random number between 1-12
 function imgPoints() {
 
-    // gets a random number between 1-12
     let randImgNum = Math.floor(Math.random() * 12) + 1;
     return randImgNum;
     
 };
 
-
+// updates the users wins and displays them on the page
 function win() {
     
     wins++;
@@ -22,6 +22,7 @@ function win() {
     
 };
 
+// updates the users losses and displays them on the page
 function lose() {
     
     losses++;
@@ -29,19 +30,22 @@ function lose() {
     
 };
 
+// used to set a new game up by setting the score to 0
 function score() {
 
     totalScore = 0;
-    $("#totalScore").html("Total Score : " + totalScore);
+    $("#totalScore").html("Your Score : " + totalScore);
 
 };
 
+// displays a random number for the user to try and match
 function randScore() {
 
     $("#randNumber").html(randNum);
 
 }
 
+// resets the game with new random numbers
 function reset() {
 
     randNum = Math.floor(Math.random() * 101) + 19;
@@ -53,19 +57,24 @@ function reset() {
 
 }
 
+// calls the reset once the page is loaded to make sure the numbers are generated
 reset();
 
-
+// the content below once the page has fully loaded
 $(document).ready(function() {
 
+    // once the mouse button is clicked, the code below will execute
     $(".imgPoints").on("click", function() {
-    
+        
+        // assigns the imgValue attribute to a variable which can than be used
+        // to get the integer value and store it in the total score
         let imageValue = ($(this).attr("data-imgValue"));
         imageValue = parseInt(imageValue);
         totalScore += imageValue;
-        $("#totalScore").html("Total Score : " + totalScore);
+        $("#totalScore").html("Your Score : " + totalScore);
 
-
+        // whether or not the user has won or lost
+        // the game will be reset with the appropriate counters being incremented
         if (totalScore === randNum) {
             win();
             reset();

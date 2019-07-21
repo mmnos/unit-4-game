@@ -8,31 +8,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-dark bg-dark text-white">
-        <h1 class="mx-auto">Bijuu Collector</h1>
+    <nav class="navbar navbar-dark bg-customColor">
+        <h1 class="mx-auto ralewayFont">Bijuu Collector</h1>
     </nav>
 
     <div class="container mt-5">
 
       <div class="row">
         <div class="col-md-4 my-auto text-white">
-            <h1 id="randNumber" class="text-center"></h1>
-            <p id="win" class="text-left">Wins : 0</p>
-            <p id="lose" class="text-left">Losses : 0</p>
+            <h3 id="win" class="text-center">Wins : 0</h3>
+            <h3 id="lose" class="text-center">Losses : 0</h3>
+            <h3 id="totalScore" class="text-center"></h3>
         </div>
         <div class="col-md-4 text-center text-white">
-          <p>You have been given a random number on the left</p>
-          <p>Along with that are 4 characters which hold different values</p>
-          <p>Click on different characters to try and match the random number</p>
-          <p>If you go over the random number, YOU LOSE</p>
+          <h1>Click on an image to begin!</h1>
         </div>
         <div class="col-md-4 my-auto text-white text-center">
-            <h2 id="totalScore"></h2>
+            <h1 id="randNumber" class="text-center"></h1>
         </div>
       </div>
       <div class="row mt-5">
@@ -57,6 +55,11 @@
               </div>
           </div>       
       </div>
+      <div class="row mt-5">
+          <div class="col-md-12">
+              <h6 class="text-center text-white">Hint : Try to match the random number on the right by checking all 4 of the image values first</h6>
+          </div>
+      </div>
     </div>
 
 <script 
@@ -64,6 +67,7 @@
   integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
   crossorigin="anonymous">
 </script>
+
 <script src="assets/javascript/game.js" type="text/javascript"></script>
     
 </body>
