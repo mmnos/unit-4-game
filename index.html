@@ -9,31 +9,34 @@
     <title>Bijuu Collector</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Julius+Sans+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-dark bg-customColor">
-        <h1 class="mx-auto ralewayFont">Bijuu Collector</h1>
-    </nav>
+    <div class="container-fluid">
+        <div class="row">
+            <h1 class="mx-auto pt-3 pb-3 border-bottom text-center custHeader">Bijuu Collector</h1>
+        </div>
+    </div>
 
     <div class="container mt-5">
 
       <div class="row">
-        <div class="col-md-4 my-auto text-white">
-            <h3 id="win" class="text-center">Wins : 0</h3>
-            <h3 id="lose" class="text-center">Losses : 0</h3>
-            <h3 id="totalScore" class="text-center"></h3>
-        </div>
-        <div class="col-md-4 text-center text-white">
+        <div class="col-md-12 text-center text-white howTo">
           <h1>Click on an image to begin!</h1>
         </div>
-        <div class="col-md-4 my-auto text-white text-center">
-            <h1 id="randNumber" class="text-center"></h1>
+      </div>
+      <div class="row">
+        <div class="col-md-12 m-3">
+            <button type="button" id="totalScore" class="btn btn-custom3 text-center m-4"></button>
+            <button type="button" id="win" class="btn btn-custom1 text-center m-4">Wins : 0</button>
+            <button type="button" id="lose" class="btn btn-custom2 text-center m-4">Losses : 0</button>
+            <button type="button" id="randNumber" class="btn btn-custom4 text-center m-4"></button>
         </div>
       </div>
-      <div class="row mt-5">
+      <div class="row mt-4">
           <div class="col col-lg-3 col-md-6 col-sm-12">
               <div class="h-100 imgPoints">
                   <img src="./assets/images/onetail.png" class="card-img-top" alt="OneTail">
@@ -57,7 +60,7 @@
       </div>
       <div class="row mt-5">
           <div class="col-md-12">
-              <h6 class="text-center text-white">Hint : Try to match the random number on the right by checking all 4 of the image values first</h6>
+              <h6 class="text-center text-white">Hint : Click on each image to find its current value</h6>
           </div>
       </div>
     </div>

@@ -41,7 +41,7 @@ function score() {
 // displays a random number for the user to try and match
 function randScore() {
 
-    $("#randNumber").html(randNum);
+    $("#randNumber").html(`Goal : ${randNum}`);
 
 }
 
